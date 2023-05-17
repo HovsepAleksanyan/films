@@ -1,0 +1,54 @@
+* {
+    font-size: 18px;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(17, 15, 26);
+}
+
+.navBtn {
+    position: absolute;
+    top: 2%;
+    right: 1%;
+
+    font-size: 115%;
+    font-weight: 500;
+    font-style: italic;
+    color: white;
+
+    background-color: rgb(17, 15, 26);
+    border: none;
+    
+}
+
+.navBtn:hover {
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+
+.navBar{
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20%;
+
+    button{
+        width: 45%;
+        background-color: #EA003D;
+        border: 1px solid #EA003D;
+        color: white;
+        padding: 2%;
+        border-radius: 50px;
+        transition: 0.3s;
+    }
+
+    button:hover{
+        cursor: pointer;
+        background-color: #df0d45;
+        border: 1px solid #df0d45;
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.153);
+        transition: 0.2s;
+    }
+}
