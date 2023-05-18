@@ -1,14 +1,22 @@
 import { PropTypes } from "prop-types";
 import { useNavigate } from "react-router";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../../assets/styles/regLog.scss";
 
+import { useSelector } from "react-redux";
 
-export const Login = ({ users, admins }) => {
+export const Login = ({ admins }) => {
+
+    const users = useSelector((state) => state.usersReducer.usersList);
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const field = useRef();
+
+    useEffect(() => {
+        field.current.focus();
+    }, [])
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
@@ -21,20 +29,22 @@ export const Login = ({ users, admins }) => {
             console.log(currentAdmin);
         } else if (currentUser) {
             navigate(`/films/${currentUser.id}`);
+            localStorage.clear();
         } else {
-            console.log("asdasd");
+            alert("There isn't any user with this email.");
         }
     }
 
     return (
         <div>
-            <button onClick={()=>navigate("/")} className="navBtn">Home</button>
+            <button onClick={() => navigate("/")} className="navBtn">Home</button>
             <form onSubmit={(Event) => handleSubmit(Event)} className="formBox">
                 <p>Login</p>
                 <input
                     type="email"
                     placeholder="Email"
                     onChange={(evt) => { setEmail(evt.target.value) }}
+                    ref={field}
                     required
                 />
                 <input
@@ -50,6 +60,5 @@ export const Login = ({ users, admins }) => {
 }
 
 Login.propTypes = {
-    users: PropTypes.array,
     admins: PropTypes.array
 }

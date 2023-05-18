@@ -1,0 +1,145 @@
+.watchFilmBox {
+    background-color: #1b1729;
+    width: 45%;
+    margin: 2% auto 0;
+    padding: 1%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.384);
+
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    .dataBox {
+        // background-color: #2d2946;
+        border-radius: 5px;
+
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        figure {
+            margin: 0;
+
+            width: 25%;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+            }
+        }
+
+        table {
+            margin: 0;
+            width: 70%;
+
+
+            th,
+            td {
+                text-align: start;
+                padding-bottom: 15px;
+                color: white;
+                font-weight: lighter;
+            }
+
+            th {
+                width: 20%;
+            }
+
+            .watchBtn {
+                padding: 15px 0 0;
+
+                button {
+                    cursor: pointer;
+                    width: 100%;
+                    background-color: #d63e66;
+                    border-radius: 5px;
+                    border: none;
+                    padding: 1%;
+                }
+
+                button:hover {
+                    background-color: #e34f76;
+                }
+            }
+        }
+    }
+
+    .commentBox {
+        .box {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.131);
+            border: 1px solid rgba(103, 103, 103, 0.794);
+            border-radius: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: auto;
+            height: 250px;
+            margin-top: 15px;
+
+            
+        p {
+            margin: 0;
+            color: rgba(222, 222, 222, 0.882);
+            font-size: 15px;
+            width: 50%;
+            text-align: start;
+            border-bottom: 1px solid rgba(172, 172, 172, 0.858);
+            padding: 1px 0;
+            margin: 0 0 20px;
+            width: 50%;
+        }
+
+        }
+
+
+        .commentForm {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+
+            >div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #e3124a;
+                width: 50%;
+                span{
+                    padding-top: 2px;
+                    font-size: 17px;
+                }
+            }
+
+            input {
+                background-color: #413b56;
+                border: 1px solid #2f2a3f;
+                border-radius: 5px;
+                font-size: 15px;
+                padding: 15px;
+                color: rgba(200, 200, 200, 0.794);
+                cursor: pointer;
+                margin-left: 15px;
+                width: 30%;
+            }
+
+            textarea {
+                resize: none;
+                background-color: rgba(128, 128, 128, 0.265);
+                border: 1px solid rgba(103, 103, 103, 0.794);
+                border-radius: 5px;
+                font-size: 15px;
+                color: rgba(185, 185, 185, 0.882);
+                width: 100%;
+                height: 70px;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            textarea:focus {
+                outline: none;
+            }
+        }
+    }
+}

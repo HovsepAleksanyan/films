@@ -1,10 +1,17 @@
 import { PropTypes } from "prop-types";
 import { useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
+import { useRef } from "react";
 import "../../assets/styles/regLog.scss";
+import { useSelector, useDispatch } from "react-redux";
+import { updateUsers } from "../../store/users/users.action";
 
 
-export const Registration = ({ users, setUsers }) => {
+export const Registration = () => {
+
+    const users = useSelector((state) => state.usersReducer.usersList);
+    const dispatch = useDispatch();
+    const field = useRef();
 
     const {
         register,
@@ -25,14 +32,15 @@ export const Registration = ({ users, setUsers }) => {
                 data
             ]
 
-            setUsers(result);
+            dispatch(updateUsers(result));
+            localStorage.clear();
             navigate(`/films/${data.id}`);
         }
     }
 
     return (
         <div>
-            <button onClick={()=>navigate("/")} className="navBtn">Home</button>
+            <button onClick={() => navigate("/")} className="navBtn">Home</button>
             <form onSubmit={handleSubmit(handleRegister)} className="formBox" >
                 <p>Registrate</p>
                 <input type="hidden" {...register("id")} value={Math.random()} />
