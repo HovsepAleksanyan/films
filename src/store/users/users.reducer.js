@@ -16,7 +16,7 @@ const initalState = {
             name: "Andranik",
             surname: "Karapetyan",
             age: 55,
-            email: "adnranik@gmail.com",
+            email: "andranik@gmail.com",
             password: "pas123"
         },
         {

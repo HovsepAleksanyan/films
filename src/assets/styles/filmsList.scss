@@ -1,0 +1,51 @@
+.filmsTable {
+    border-collapse: collapse;
+    background-color: #6756a6;
+    box-shadow: 0 0 15px rgba(183, 183, 183, 0.556);
+
+    width: 50%;
+    margin: 2% auto;
+
+    .title{
+        width: 55%;
+    }
+
+    tr,
+    td,
+    th {
+        border: 1px solid #27223a;
+        text-align: start;
+        padding: 5px;
+    }
+
+    button {
+        width: 100%;
+        cursor: pointer;
+        background-color: #be2951;
+        border: 1px solid #27223a;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #d8325e;
+    }
+
+    .addBtn {
+        background-color: seagreen;
+    }
+
+    .addBtn:hover {
+        background-color: rgb(55, 156, 98);
+    }
+
+    span {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    span:hover {
+        background-color: #7865bd;
+    }
+}

@@ -1,0 +1,90 @@
+.userTable {
+    background-color: #6756a6;
+    box-shadow: 0 0 15px rgba(183, 183, 183, 0.556);
+    border-collapse: collapse;
+    width: 30%;
+    margin: 3% auto 0;
+
+
+    tr,
+    td,
+    th {
+        border: 1px solid #27223a;
+        text-align: start;
+        padding: 5px;
+    }
+
+    button {
+        width: 100%;
+        cursor: pointer;
+        background-color: rgb(231, 201, 31);
+        border: 1px solid #27223a;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: rgb(222, 189, 0);
+    }
+}
+
+.editBox {
+    width: 40%;
+    position: absolute;
+    background-color: rgba(231, 201, 31, 0.442);
+    box-shadow: 0 0 5px rgba(183, 183, 183, 0.556);
+    top: 40%;
+    left: 30%;
+
+    .editForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: rgba(231, 201, 31, 0.688);
+        width: 60%;
+        margin: 35px auto;
+        padding: 15px;
+
+        span{
+            color: #d70000;
+            text-align: center;
+        }
+
+        input {
+            margin-top: 5px;
+            padding: 3px;
+            outline: none;
+            border: 1px solid rgb(31, 113, 181);
+            background-color: rgb(147, 201, 223);
+            font-size: 17px;
+        }
+
+        :last-child {
+            background-color: #6756a6;
+            border: 1px solid #6246c7;
+            width: 50%;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        :last-child:hover {
+            background-color: #846ed2;
+        }
+    }
+
+    button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-weight: 500;
+        font-style: italic;
+        font-size: 20px;
+        background-color: #d700008a;
+        border: none;
+    }
+    
+    button:hover {
+        cursor: pointer;
+        background-color: #ec00008a;
+    }
+}

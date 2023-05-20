@@ -9,6 +9,7 @@ import { updateUsers } from "../../store/users/users.action";
 
 export const Registration = () => {
 
+    const admin = useSelector((state) => state.adminReducer.admin);
     const users = useSelector((state) => state.usersReducer.usersList);
     const dispatch = useDispatch();
     const field = useRef();
@@ -21,10 +22,11 @@ export const Registration = () => {
     const navigate = useNavigate();
 
     const handleRegister = (data) => {
-        const check = users.find((u) => (u.email === data.email));
+        const checkAdmin = data.email === admin.email;
+        const checkUser = users.find((u) => (u.email === data.email));
 
-        if (check) {
-            alert("Please write another email.")
+        if (checkUser || checkAdmin) {
+            alert("Please write another email.");
         } else {
             let result = users;
             result = [
@@ -43,7 +45,7 @@ export const Registration = () => {
             <button onClick={() => navigate("/")} className="navBtn">Home</button>
             <form onSubmit={handleSubmit(handleRegister)} className="formBox" >
                 <p>Registrate</p>
-                <input type="hidden" {...register("id")} value={Math.random()} />
+                <input type="hidden" {...register("id")} value={`${Math.random()}`} />
                 <input
                     type="text"
                     {
