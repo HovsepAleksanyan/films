@@ -1,10 +1,8 @@
 import { useParams, useNavigate } from "react-router";
 import "../../assets/styles/films.scss";
 import userIcon from "./user-icon.jpg";
-import { Loading } from "../../components/loading";
 
 import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
 
 export const Films = () => {
 

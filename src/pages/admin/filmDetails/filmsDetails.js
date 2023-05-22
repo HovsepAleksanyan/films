@@ -30,7 +30,7 @@ export const FilmDetails = () => {
     const handleBack = () => {
         navigate(-1);
     }
-console.log('asdads');
+
     return (
         <div>
             <button className="navBtn" onClick={handleBack}>Back</button>
