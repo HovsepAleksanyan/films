@@ -65,7 +65,7 @@ export const FilmsList = () => {
                     }
                     <tr>
                         <td colSpan={4}>
-                            <button onClick={handleDeleteAllFilms}>Delete All Users</button>
+                            <button onClick={handleDeleteAllFilms}>Delete All Films</button>
                         </td>
                     </tr>
                 </tbody>

@@ -68,3 +68,45 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+## 🎬 Films App
+
+A web app built using **React**, **Redux**, and **SCSS** that allows **admins** to manage users, films, and comments, while **users** can view films, add comments, and manage their own account.
+
+---
+
+### 🧰 **Technologies Used**
+
+- **React.js** – Core library for building the app’s UI
+- **Redux** – Global state management for user and film data
+- **React Router** – For handling navigation between pages
+- **SCSS** – For modular and reusable styling
+- **JavaScript (ES6+)** – Core programming language for logic and interaction
+- **PropTypes** – To validate the props passed to React components
+- **React Hook Form** – For handling and validating forms
+
+---
+
+### 🚀 **Features**
+
+#### **For Admin:**
+- View list of users
+- Add, Delete users
+- Edit user data
+- View list of films
+- Delete films
+- Delete comments of films
+
+#### **For User:**
+- View list of films
+- Add comments to films
+- Watch films (via links to another site, though that site no longer exists)
+- Set new password
+
+---
+
+### 🔑 **Admin Info**
+- **Login**: admin@admin.com  
+- **Password**: main_admin
